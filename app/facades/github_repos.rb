@@ -13,6 +13,7 @@ class GithubRepos
     response = conn.get("/user/repos")
     user_repos = JSON.parse(response.body, symbolize_names: true)
     all_repos = user_repos.map { |repo| Repository.new(repo) }
+    all_repos.drop(repo_count)
   end
 
   private
