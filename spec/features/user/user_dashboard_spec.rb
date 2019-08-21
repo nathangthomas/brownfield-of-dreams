@@ -15,11 +15,12 @@ RSpec.describe "Dashboard page" do
           visit dashboard_path
 
           within ".github" do
-            expect(page).to have_link("rails_engine")
+            # save_and_open_page
+            expect(page).to have_link("enigma")
             expect(page).to have_link("monster_shop")
             expect(page).to have_link("here-be-dragons")
-            expect(page).to have_link("storedom")
-            expect(page).to have_link("vending-machine-tracker-1")
+            expect(page).to have_link("1903_final")
+            expect(page).to have_link("blogger")
           end
         # end
       end

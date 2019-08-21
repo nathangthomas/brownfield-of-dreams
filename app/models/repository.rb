@@ -7,5 +7,4 @@ class Repository
     @url = attrs[:url]
     @html_url = attrs[:html_url]
   end
-
 end

@@ -1,7 +1,7 @@
 class GithubRepos
 
-  def initialize(user)
-    @user = user
+  def initialize(current_user)
+    @user = current_user
   end
 
   def repos(repo_count)
@@ -12,8 +12,7 @@ class GithubRepos
 
     response = conn.get("/user/repos")
     user_repos = JSON.parse(response.body, symbolize_names: true)
-    require 'pry';binding.pry
-    # x = user_repos.map { |repo| Repository.new(repo) }
+    all_repos = user_repos.map { |repo| Repository.new(repo) }
   end
 
   private
