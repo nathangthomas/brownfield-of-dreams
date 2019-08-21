@@ -5,6 +5,7 @@ FactoryBot.define do
     last_name { Faker::Artist.name }
     password { Faker::Color.color_name }
     role { :default }
+    token { 'abc1340csdau03amlkdsa' }
   end
 
   factory :admin, parent: :user do
