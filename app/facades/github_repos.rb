@@ -12,7 +12,8 @@ class GithubRepos
 
     response = conn.get("/user/repos")
     user_repos = JSON.parse(response.body, symbolize_names: true)
-    user_repos.map { |repo| repo[:name] }
+    require 'pry';binding.pry
+    # x = user_repos.map { |repo| Repository.new(repo) }
   end
 
   private
