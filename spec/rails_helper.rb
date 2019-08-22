@@ -52,7 +52,7 @@ end
 
 def stub_dashboard_api_calls
   git_hub_repos = File.open("./fixtures/github_repos.json")
-  stub_request(:get, "https://api.github.com/user/repos").to_return(status:200, body:git_hub_repos)
+  stub_request(:get, "https://api.github.com/user/repos").to_return(status:200, body: git_hub_repos)
   # git_hub_repos_parced = JSON.parse(git_hub_repos)
   #add each new api call here
 end

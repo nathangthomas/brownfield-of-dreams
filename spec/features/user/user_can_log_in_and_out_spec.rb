@@ -2,6 +2,7 @@ require 'rails_helper'
 
 describe 'User' do
   it 'user can sign in' do
+    stub_dashboard_api_calls
     user = create(:user)
 
     visit '/'
@@ -22,6 +23,7 @@ describe 'User' do
   end
 
   it 'can log out', :js do
+    stub_dashboard_api_calls
     user = create(:user)
 
     visit login_path
@@ -43,6 +45,7 @@ describe 'User' do
   end
 
   it 'is shown an error when incorrect info is entered' do
+    stub_dashboard_api_calls
     user = create(:user)
     fake_email = "email@email.com"
     fake_password = "123"
