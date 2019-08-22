@@ -1,10 +1,11 @@
-class GithubReposFacade
+class UsersFacade
 
   def initialize(current_user)
     @user = current_user
   end
 
   def repos
+    require 'pry';binding.pry
     service = GithubService.new
     service.users_repos(repo_count).map { |repo| Repository.new(repo)}
 
@@ -12,7 +13,6 @@ class GithubReposFacade
 
 
     # all_repos = user_repos.map { |repo| Repository.new(repo) }
-    # all_repos.drop(repo_count)
   end
 
   private

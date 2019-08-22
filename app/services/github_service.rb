@@ -2,7 +2,8 @@ class GithubService
 
   def users_repos(repo_count)
     response = conn.get("/user/repos")
-    JSON.parse(response.body, symbolize_names: true)
+    all_repos = JSON.parse(response.body, symbolize_names: true)
+    all_repos.take(repo_count)
   end
 
   private

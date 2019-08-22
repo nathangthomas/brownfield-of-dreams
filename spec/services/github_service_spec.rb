@@ -4,12 +4,12 @@ RSpec.describe GithubService do
   context "instance methods" do
     context "#users_repos" do
       it "returns specific users data" do
-        user = create(:user, token: ENV['GITHUB_API_KEY'])
-        search = subject.users_repos(user)
-        expect(search).to be_a Hash
-        expect(search[:results]).to be_an Array
-        expect(search[:results].count).to eq 7
-        user_data = search[:results].first
+        WebMock.allow_net_connect!
+        VCR.turn_off!
+        repos = subject.users_repos(5)
+        expect(repos).to be_a Array
+        expect(repos.count).to eq 5
+        user_data = repos.first
 
         expect(user_data).to have_key :id
         expect(user_data).to have_key :name
