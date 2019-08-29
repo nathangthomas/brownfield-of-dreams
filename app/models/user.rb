@@ -19,6 +19,10 @@ class User < ApplicationRecord
     self.token = auth_hash["credentials"]["token"]
   end
 
+  def bookmarked_tutorials
+    Tutorial.includes(videos: :user_videos).where(user_videos:{user_id: id}).order('videos.position')
+  end
+
   def active
     if status == true
       'Active'

@@ -21,11 +21,13 @@ http_interactions:
       message: OK
     headers:
       X-Guploader-Uploadid:
-      - AEnB2UrtVg9UcxtdwrmbHmjZfFCZFWQNmP9WrCMGDM2Ok1uEZj19P7yhFTY3msIr01uzKlRHRRvw_nhkS97d3xBqgPkBpFrLkA
+      - AEnB2Up2_nSf63-8O0eeFUKwyMu17uL_3_rpgFG7o3bwxT-WNDsYhALnlTduHro0tmAbqg4exQtVBUdVs_XZXR0WsufqtvURCw
       Expires:
-      - Tue, 27 Aug 2019 18:42:26 GMT
+      - Thu, 29 Aug 2019 19:01:31 GMT
       Date:
-      - Tue, 27 Aug 2019 17:42:26 GMT
+      - Thu, 29 Aug 2019 18:01:31 GMT
+      Cache-Control:
+      - public, max-age=3600
       Last-Modified:
       - Tue, 20 Aug 2019 18:01:31 GMT
       Etag:
@@ -53,17 +55,13 @@ http_interactions:
       - '13'
       Server:
       - UploadServer
-      Cache-Control:
-      - public, max-age=3600
-      Age:
-      - '782'
       Alt-Svc:
       - quic=":443"; ma=2592000; v="46,43,39"
     body:
       encoding: UTF-8
       string: 76.0.3809.126
     http_version: 
-  recorded_at: Tue, 27 Aug 2019 17:55:28 GMT
+  recorded_at: Thu, 29 Aug 2019 18:01:30 GMT
 - request:
     method: get
     uri: https://www.googleapis.com/youtube/v3/videos?id=J7ikFUlkP_k&key&part=snippet,contentDetails,statistics
@@ -88,9 +86,9 @@ http_interactions:
       Content-Type:
       - application/json; charset=UTF-8
       Date:
-      - Tue, 27 Aug 2019 17:55:31 GMT
+      - Thu, 29 Aug 2019 18:01:37 GMT
       Expires:
-      - Tue, 27 Aug 2019 17:55:31 GMT
+      - Thu, 29 Aug 2019 18:01:37 GMT
       Cache-Control:
       - private, max-age=0
       X-Content-Type-Options:
@@ -122,5 +120,5 @@ http_interactions:
          }
         }
     http_version: 
-  recorded_at: Tue, 27 Aug 2019 17:55:32 GMT
+  recorded_at: Thu, 29 Aug 2019 18:01:36 GMT
 recorded_with: VCR 4.0.0
